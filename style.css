@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #ffe4e6, #e0f7fa);
+}
+
+header {
+    background: #ffffffaa;
+    padding: 1rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+header h1 {
+    color: #ff69b4;
+}
+
+.todo-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.input-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.input-section input[type="text"],
+.input-section input[type="date"],
+.input-section input[type="time"] {
+    padding: 0.5rem;
+    border: 2px solid #add8e6;
+    border-radius: 5px;
+    outline: none;
+    flex: 1 1 150px;
+}
+
+#addTask {
+    padding: 0.5rem 1rem;
+    background: #add8e6;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#addTask:hover {
+    background: #87ceeb;
+}
+
+#taskList {
+    list-style: none;
+    width: 90%;
+    max-width: 500px;
+}
+
+.task-item {
+    background: #ffffffdd;
+    backdrop-filter: blur(5px);
+    padding: 0.7rem;
+    border: 1px solid #ddd;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s;
+    flex-wrap: wrap;
+}
+
+.task-item.completed {
+    text-decoration: line-through;
+    background: #e0e0e0cc;
+    color: #888;
+}
+
+.task-details {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-right: 10px;
+}
+
+.task-title {
+    font-weight: 500;
+}
+
+.task-meta {
+    font-size: 0.8rem;
+    color: #555;
+}
+
+.delete-btn {
+    background: #ff6b6b;
+    border: none;
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background 0.3s;
+}
+
+.delete-btn:hover {
+    background: #ff4c4c;
+}
+
+footer {
+    text-align: center;
+    padding: 0.5rem;
+    background: #ffffffaa;
+    font-size: 0.9rem;
+    color: #333;
+    backdrop-filter: blur(10px);
+}
